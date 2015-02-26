@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>VerLim.js by pranayjoshicse</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>VerLim.js</h1>
+          <h2>A lightweight customizable plugin for jQuery to show horizontal length in form of vertical progress bar</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/pranayjoshicse/VerLim.js/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/pranayjoshicse/VerLim.js/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/pranayjoshicse/VerLim.js" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a id="verlimjs-a-jquery-plugin" class="anchor" href="#verlimjs-a-jquery-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>VerLim.js A jQuery plugin</h1>
+
+<hr>
+
+<h2>
+<a id="a-lightweight-customizable-plugin-for-jquery-to-show-horizontal-length-in-form-of-vertical-progress-bar" class="anchor" href="#a-lightweight-customizable-plugin-for-jquery-to-show-horizontal-length-in-form-of-vertical-progress-bar" aria-hidden="true"><span class="octicon octicon-link"></span></a>A lightweight customizable plugin for jQuery to show horizontal length in form of vertical progress bar</h2>
+
+<hr>
+
+<p><img src="http://pranayjoshi.thoughts2share.in/wp-content/uploads/2015/02/VerLim3.png" alt=""></p>
+
+<p><img src="http://pranayjoshi.thoughts2share.in/wp-content/uploads/2015/02/VerLim1.png" alt=""></p>
+
+<h2>
+<a id="what-is-verlim" class="anchor" href="#what-is-verlim" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is VerLim?</h2>
+
+<p>Visiting a website on mobile device but not able to know:
+1. How lengthy the page is?
+2. How much you had scrolled before closing the page for the next read.
+Here is the solution; VerLim provides a cool progress bar indicating how much is the page length and how much scrolled.</p>
+
+<p><img src="http://pranayjoshi.thoughts2share.in/wp-content/uploads/2015/02/VerLim2.png" alt=""></p>
+
+<p>In order to use VerLim simply Include VerLim.js and a CSS theme (optional) of your choice, and you get a beautiful progress indicator
+No need to hook into any of your code, scroll amount is detected automatically.</p>
+
+<h2>
+<a id="highlights" class="anchor" href="#highlights" aria-hidden="true"><span class="octicon octicon-link"></span></a>Highlights</h2>
+
+<p>Released under the MIT License. Source on Github (changelog).</p>
+
+<p>Compatible with: jQuery 1.3.2+ in Firefox, Safari, Chrome, Opera, Internet Explorer 7+</p>
+
+<p>Bower Package: VerLim.js</p>
+
+<p>Supports web browser in desktop as well as mobile versions.
+ Lightweight: 3KB of JavaScript (less than 2KBs minified and 1KBs zipped).
+ Appearance is controlled through CSS so it can be restyled.
+ Can be extended with callbacks &amp; event-hooks without altering the source files. (future inhancement)
+ Completely unobtrusive, options are set in the JS and require no changes to existing HTML.
+Preloads upcoming images in a photo group</p>
+
+<h2>
+<a id="instructions--help" class="anchor" href="#instructions--help" aria-hidden="true"><span class="octicon octicon-link"></span></a>Instructions &amp; Help</h2>
+
+<p>The <a href="http://pranayjoshi.thoughts2share.in/verlim-faq/">FAQ</a> has instructions on asking for help, solutions to common problems, and how-to examples. First-time jQuery users can check out the <a href="http://pranayjoshi.thoughts2share.in/verlim-js-beginners-guide/">VerLim.js Beginner’s Guide</a>. Intermediate users can probably glean everything needed by view-source’ing the demos.</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>VerLim is fully automatic, no configuration is necessary to get started.</p>
+
+<p>// Format:
+<code>$(window).VerLim();</code></p>
+
+<p>If you would like to make some tweaks, here’s how:</p>
+
+<p><code>samples: // passing some basic setting(s)</code>
+<code>$(window).VerLim(</code>
+    <code>{</code>
+        <code>color: "#dd2266",</code>
+        <code>autoHide: "on",</code>
+        <code>autoHideTime: "2",</code>
+        <code>theme: "on",</code>
+        <code>position: "top",</code>
+        <code>thickness: "5px",</code>
+        <code>shadow: "on"</code>
+    <code>});</code></p>
+
+<h2>
+<a id="settings" class="anchor" href="#settings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Settings</h2>
+
+<p>active : To disable the plug in effect set this setting as “off”, by default it’s “on” and progress bar will be visible</p>
+
+<p>autoHide : Sets the progress to be hidden after a default (2 seconds) or configure time.</p>
+
+<p>autoHideTime : Sets the time of the auto hide property, in seconds.</p>
+
+<p>color : This can be used to set color of progress bar, provide a valid RGB color code or valid color name (e.g. #FF0000 or red)</p>
+
+<p>position : If top progress bar will be shown on the upper side of the screen, other option is “bottom”</p>
+
+<p>thickness : The thickness of progress bar, can be set in any format, if only number it will be px, other options are “5px”,  “5pt”,  “5%”, “5em”</p>
+
+<p>theme : This allows the user to set theme to the progress bar, set this as “on” and add css (if no css found default will work see demo)</p>
+
+<p>shadow : If “on” provides a cool blue color shadow below progress bar using box shadow property.</p>
+
+<h2>
+<a id="public-methods" class="anchor" href="#public-methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Public Methods</h2>
+
+<p>$(window).VerLim();  This method allows you to call VerLim without having to assign any configuration to it.</p>
+
+<h2>
+<a id="themes" class="anchor" href="#themes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Themes</h2>
+
+<p>VerLim.js currently includes two themes to get you started. Just include the appropriate css file.</p>
+
+<h2>
+<a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dependencies</h2>
+
+<p>As it’s a JQuery plug in; the only dependency is the earlier.</p>
+
+<h2>
+<a id="support" class="anchor" href="#support" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support</h2>
+
+<p>VerLim is designed to show progress bar on almost all modern mobile browser(s) ; also it support IE7+ (standards mode), FF 3.5+, Chrome, Safari 4+, Opera 10.5+.</p>
+
+<h2>
+<a id="size" class="anchor" href="#size" aria-hidden="true"><span class="octicon octicon-link"></span></a>Size</h2>
+
+<p>VerLim.js is 2kb minified. The themes vary between 2 and 4kb.</p>
+
+<h2>
+<a id="before-you-go" class="anchor" href="#before-you-go" aria-hidden="true"><span class="octicon octicon-link"></span></a>Before you go,</h2>
+
+<p>Follow me on <a href="https://twitter.com/pranayjoshicse">Twitter</a> and <a href="https://github.com/pranayjoshicse">Github</a>, that’s where I’m most active these days. I welcome email (<a href="mailto:pranay.joshi@outlook.com">pranay.joshi@outlook.com</a>), you can also visit our home page @ <a href="http://thoughts2share.in/">thoughts2share.in</a> to get more detail <a href="about.me/pranayjoshi">About Us</a>.</p>
+        </section>
+
+        <footer>
+          VerLim.js is maintained by <a href="https://github.com/pranayjoshicse">pranayjoshicse</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+                  <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-56820937-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+      </div>
+    </div>
+  </body>
+</html>
