@@ -31,3 +31,10 @@ VerLim is designed to show progress bar on almost all modern mobile browser(s) ;
 
 Size
 VerLim.js is 2kb minified. The themes vary between 2 and 4kb.
+
+#################################################################
+
+v1.01
+* Adding two more theme in order to support on screen counter 
+	counter value can be retrieved using $('#scroller').attr('scroller-width') jqery code
+* changing folder structure
