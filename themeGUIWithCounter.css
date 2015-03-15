@@ -1,0 +1,62 @@
+/*!
+ * VerLim.js v1.0.1 (http://thoughts2Share.in) /(http://pranayjoshi.thoughts2Share.in) 
+ * Copyright 2014-2015 Thoughts2Share.in
+ * Licensed under MIT (http://opensource.org/licenses/mit-license.php)
+ */
+.VerLim{
+	position: fixed;
+  top: 0;
+  left: 0;
+  right: -28px;
+  bottom: 0;
+
+  -webkit-background-image: radial-gradient(rgba(255, 255, 255, .65) 0%, rgba(255, 255, 255, .15) 100%);
+  -moz-background-image: radial-gradient(rgba(255, 255, 255, .65) 0%, rgba(255, 255, 255, .15) 100%);
+  -o-background-image: radial-gradient(rgba(255, 255, 255, .65) 0%, rgba(255, 255, 255, .15) 100%);
+  background-image: radial-gradient(rgba(255, 255, 255, .65) 0%, rgba(255, 255, 255, .15) 100%);
+
+  -webkit-background-size: 28px 100%;
+  -moz-background-size: 28px 100%;
+  -o-background-size: 28px 100%;
+  background-size: 28px 100%;
+
+  -webkit-animation: verlim-theme-mac-osx-motion 500ms linear infinite;
+  -moz-animation: verlim-theme-mac-osx-motion 500ms linear infinite;
+  -ms-animation: verlim-theme-mac-osx-motion 500ms linear infinite;
+  -o-animation: verlim-theme-mac-osx-motion 500ms linear infinite;
+  animation: verlim-theme-mac-osx-motion 500ms linear infinite;
+}
+
+@-webkit-keyframes verlim-theme-mac-osx-motion {
+  0% { -webkit-transform: none; transform: none; }
+  100% { -webkit-transform: translate(-28px, 0); transform: translate(-28px, 0); }
+}
+@-moz-keyframes verlim-theme-mac-osx-motion {
+  0% { -moz-transform: none; transform: none; }
+  100% { -moz-transform: translate(-28px, 0); transform: translate(-28px, 0); }
+}
+@-o-keyframes verlim-theme-mac-osx-motion {
+  0% { -o-transform: none; transform: none; }
+  100% { -o-transform: translate(-28px, 0); transform: translate(-28px, 0); }
+}
+@-ms-keyframes verlim-theme-mac-osx-motion {
+  0% { -ms-transform: none; transform: none; }
+  100% { -ms-transform: translate(-28px, 0); transform: translate(-28px, 0); }
+}
+@keyframes verlim-theme-mac-osx-motion {
+  0% { transform: none; transform: none; }
+  100% { transform: translate(-28px, 0); transform: translate(-28px, 0); }
+}
+#scroller:after {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: .5rem;
+  content: attr(scroller-width);
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 100;
+  font-size: 5rem;
+  line-height: 1;
+  text-align: right;
+  color: #fff;
+}
