@@ -1,13 +1,13 @@
 /*!
 	VerLim.js v1.0.1 (http://thoughts2Share.in) /(http://pranayjoshi.thoughts2Share.in) 
-	Copyright 2011-2014 Thoughts2Share.in
+	Copyright 2014-2015 Thoughts2Share.in
 	Licensed under MIT (http://opensource.org/licenses/mit-license.php)
 */
 (function($) {
     $.fn.VerLim = function(options) {
         options = $.extend({}, defaults, options);
         if (options.active === "on") {
-            $('body').prepend('<div id="scroller" style="width: 1px;height: 10px;z-index: 2000;left:0px;position: fixed;"><div id="VerLimTheme"></div></div>');
+            $('body').prepend('<div id="scroller" scroller-width="" style="width: 1px;height: 10px;z-index: 2000;left:0px;position: fixed;"><div id="VerLimTheme"></div></div>');
             var $window = $(window);
             var documentHeight = $(document).height();
             var windowHeight = $window.height();
@@ -40,6 +40,7 @@
             target.css('background-color', options.color);
             target.css('width', scrollPercent * 100 + "%");
             target.css('height', options.thickness);
+			target.attr('scroller-width', Math.round(scrollPercent * 100));
             if (options.theme === "on") {
                 themeTarger.removeClass().addClass("VerLim");
                 themeTarger.css('height', options.thickness);
