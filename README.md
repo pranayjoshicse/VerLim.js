@@ -37,10 +37,13 @@ VerLim.js is 2kb minified. The themes vary between 2 and 4kb.
 ###v1.0.1
 * Adding two more theme in order to support on screen counter; counter value can be retrieved using $('#scroller').attr('scroller-width') jqery code
 * changing folder structure
+
 =======================================================================================
+
 ###v2.0
 * Added a new method named "scrollTo", to navigate through the page easily
 * one bug fix showing NaN in theme counter.
 
 TO-DO : Document needs to be updated for new method, add demo for the same
+
 =======================================================================================
