@@ -1,5 +1,5 @@
 /*!
-	VerLim.js v1.0.1 (http://thoughts2Share.in) /(http://pranayjoshi.thoughts2Share.in) 
+	VerLim.js v2.0.1 (http://thoughts2Share.in) /(http://pranayjoshi.thoughts2Share.in) 
 	Copyright 2014-2015 Thoughts2Share.in
 	Licensed under MIT (http://opensource.org/licenses/mit-license.php)
 */
@@ -27,7 +27,6 @@
                 calculate();
             });
         }
-
         function calculate() {
             clearTimeout(timer);
             if (options.autoHide === "on") {
@@ -40,7 +39,7 @@
             target.css('background-color', options.color);
             target.css('width', scrollPercent * 100 + "%");
             target.css('height', options.thickness);
-			target.attr('scroller-width', Math.round(scrollPercent * 100));
+            target.attr('scroller-width', (isNaN(scrollPercent)) ? 0 : Math.round(scrollPercent * 100));
             if (options.theme === "on") {
                 themeTarger.removeClass().addClass("VerLim");
                 themeTarger.css('height', options.thickness);
@@ -63,7 +62,6 @@
                     break;
             }
         }
-
         function autoHide() {
             target.clearQueue();
             target.stop();
@@ -72,6 +70,36 @@
             }, options.autoHideTime * 1000);
         }
     };
+
+    $.fn.scrollTo = function(target, options, callback) {
+        var $window = $(window);
+        var documentHeight = $(document).height();
+        var windowHeight = $window.height();
+        if (target > 0 && target < 100) {
+            targetOrPer = ((documentHeight - windowHeight) * target) / 100
+        } else targetOrPer = target;
+        if (typeof options == 'function' && arguments.length == 2) {
+            callback = options;
+            options = target;
+        }
+        var settings = $.extend({
+            scrollTarget: targetOrPer,
+            duration: 500,
+            easing: 'swing'
+        }, options);
+        return this.each(function() {
+            var scrollPane = $(this);
+            var scrollTarget = (typeof settings.scrollTarget == "number") ? settings.scrollTarget : $(settings.scrollTarget);
+            var scrollY = (typeof scrollTarget == "number") ? scrollTarget : scrollTarget.offset().top;
+            scrollPane.animate({
+                scrollTop: scrollY
+            }, parseInt(settings.duration), settings.easing, function() {
+                if (typeof callback == 'function') {
+                    callback.call(this);
+                }
+            });
+        });
+    }
     var defaults = {
         active: "on",
         autoHide: "off",
