@@ -75,8 +75,13 @@
         var $window = $(window);
         var documentHeight = $(document).height();
         var windowHeight = $window.height();
-        if (target > 0 && target < 100) {
-            targetOrPer = ((documentHeight - windowHeight) * target) / 100
+        if (target > 0 && target <= 100) {
+            if($(this)[0].tagName=="BODY")
+            {targetOrPer = ((documentHeight - windowHeight) * target) / 100}
+            else
+            {
+              targetOrPer = (($(this)[0].scrollHeight) * target) / 100;
+            }
         } else targetOrPer = target;
         if (typeof options == 'function' && arguments.length == 2) {
             callback = options;
@@ -88,13 +93,13 @@
             easing: 'swing'
         }, options);
         return this.each(function() {
-            var scrollPane = $(this);
+            var scrollPane = ($(this)[0].tagName=="BODY")?$('body,html'):$(this);
             var scrollTarget = (typeof settings.scrollTarget == "number") ? settings.scrollTarget : $(settings.scrollTarget);
-            var scrollY = (typeof scrollTarget == "number") ? scrollTarget : scrollTarget.offset().top;
+            var scrollY = (typeof scrollTarget == "number") ? scrollTarget : Math.abs(scrollTarget.position().top);
             scrollPane.animate({
                 scrollTop: scrollY
             }, parseInt(settings.duration), settings.easing, function() {
-                if (typeof callback == 'function') {
+                if (typeof callback == 'function' && $(this)[0].tagName!="HTML") {
                     callback.call(this);
                 }
             });

@@ -44,6 +44,4 @@ VerLim.js is 2kb minified. The themes vary between 2 and 4kb.
 * Added a new method named "scrollTo", to navigate through the page easily
 * one bug fix showing NaN in theme counter.
 
-TO-DO : Document needs to be updated for new method, add demo for the same
-
 =======================================================================================
