@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>VerLim.js Demo </title>
+<link rel="stylesheet" href="../css/button.css">
+<link rel="stylesheet" href="../css/Main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="../scripts/VerLim.min.js"></script>	
+    <script src="../scripts/easing.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/themeNUIwithCounter.css">
+	<script src="../scripts/exampleScripts.js"></script>
+</head>
+<body>
+        <div>
+            <div id="sitewrapper">
+                <div id="bodywrapper" class="container">
+                    <div id="main" class="grid">
+                        <div style="float: left;"><a href="http://thoughts2share.in" target="_blank"><img src="../images/MainLogo.PNG"/></a></div>
+						<div class="logo">
+							<div class="mainTitle">VerLim.js
+							</div>
+							<div class="subTitle">A JQuery Plug-in
+							</div>
+						</div>
+						<hr class="hr"/>
+						<h2>VerLim.js demo(s)</h2>
+                        <h3>Index</h3>
+                        <ul>
+                        <li><i><span id="demoLink1">Demo : #1 Adding VerLim.js to see the height of page in form of progress bar </span></i></li>
+                        <li><i><span id="demoLink2"> Demo : #2 Using themes to customise progress bar</span></i></li>
+                        <li><i><span id="demoLink3">Demo : #3 Scrolling to a desired position using scrollTo method </span></i></li>
+                        <li><i><span id="demoLink4"> Demo : #4 scrollTo method with scroll duration</span></i></li>
+                        <li><i><span id="demoLink5">Demo : #5 scrollTo method with callback </span></i></li>
+                        <li><i><span id="demoLink6">Demo : #6 scrollTo method with easing options </span></i></li>
+                        <li><i><span id="demoLink7">Demo : #7 using scrollTo other scrollable elements </span></i></li>
+                        <li><i><span id="demoLink8"> Demo : #8 using scrollTo to navigate to a specific element with in the scrollable element</span></i></li>
+                          <li><i><span id="demoLink9"> Demo : #9 How much amount of page I have scrolled, to put some condition on a specific amount</span></i></li>
+                          <li><i><span id="beforeYouGoLink"> Before you go,</span></i></li><br/><br/>
+                        </ul>
+                        <hr/>
+                        <h3 id="demo1">Demo : #1 Adding VerLim.js to see the height of page in form of progress bar</h3>
+						<span> follow the below steps
+                        </span>
+                        <ul>
+                            <li>Post adding reference to the VerLim.js and JQuery simply add the below code snippet</li><br/>
+                            <code><b>$().VerLim();</b></code>
+                        </ul>
+                        <span> Very easy isn't it..??? Now if you observe this page while scrolling; you will find this demo working.(internet connection required in order to load JQuery.js) <br/>There are lots of customisable options available to change progress bar and its functionality; Navigate <a href="http://pranayjoshi.thoughts2share.in/VerLim" target="_blank"><b>here</b></a> for the complete list of customisation options.</span>
+<hr/>
+                        <h3 id="demo2">Demo : #2 Using themes to customise progress bar</h3>
+						<span>In order to do so follow the below steps
+                        </span>
+                        <ul>
+                            <li>Add reference to JQuery and VerLim.js</li>
+                            <li>Get any theme of your choice (available in github) and put reference in the code</li>
+                            <li>Pass configuration to VerLim as set theme : "on"</li><br/>
+                            <code><b>$().VerLim({theme : "on"});</b></code>
+                        </ul>
+                        <span> Done!!! that's it, VerLim will take care of rest.<br/>Want to make your own theme? you are free to to so modify the existing one or in css make <code>.VerLim</code> class and put your imagination there.</span>
+<hr/>
+                        <h3 id="demo3">Demo : #3 Scrolling to a desired position using <code>scrollTo</code> method</h3>
+						<span>Imagine you are visiting a page in mobile device & don't know how lengthy the page is??? well!! VerLim.js solves this by showing progress bar, but; what if you are reading the same page and want to navigate to the position where you left in the last read?<br/><code>scrollTo</code> method works very well in that cases, lets see how..
+                        </span>
+                        <ul>
+                            <li>Add reference to JQuery and VerLim.js</li>
+                            <li>In the below example we are calling the <code>scrollTo</code> method on onClick event of the button to go to specific position, you can use it according to your requirement</li>
+                            <li>to call <code>scrollTo</code>, use this code snippet</li><br/>
+                            <code><b>$('body').scrollTo(50);</b></code>
+                            <li>We have passed the body as selector because we want to navigate to the body's specific position, (you can use it to navigate to any scrollable element, in a later demo)</li>
+                            <li>You can pass any number between 1 to 100; scrollTo will treat it as percentage (as shown by the plug-in on the right top), and proceed further.</li>
+                        </ul>
+                        <div class="outerContent">
+                        <div class="innerContent" align='center'>                            
+                            <input placeholder="nav %" type="number" min="0" max="100" class="scrollToInput" id="scrollToInput">
+                            <button class="blue" id='letsgo'>go!!!</button>
+                        </div>
+                        </div>
+                        <span> Awesome!!! Isn't it?<br/>
+                       <hr/>
+<h3 id="demo4">Demo : #4 <code>scrollTo</code> method with scroll duration</h3>                            
+                            <code>scrollTo</code> is not limited to this, you can even set the animation time by passing <code>duration</code> amount like this: <br/></span><br/>
+                        <code><b>$('body').scrollTo(50,{duration: 5000});</b></code><br/><br/>
+                        <span>lets see how its looks running</span>
+                        <div class="outerContent">
+                        <div class="innerContent" align='center'>                            
+                            <input placeholder="nav %" type="number" min="0" max="100" class="scrollToInput" id="scrollToInput1">
+                            <button class="blue" id='letsgo1'>go!!!</button>
+                        </div>
+                        </div>
+                        <hr/>
+<h3 id="demo5">Demo : #5 <code>scrollTo</code> method with callback</h3>
+                        <span> Pretty cool huh!!!, not only this you can call a call back method after the animation completes, to do so pass your call back function in configuration like this: <br/></span><br/>
+                        <code><b>$('body').scrollTo(50,{duration:5000},function(){alert('Hello World!!!')});</b></code><br/><br/>
+                        <span>or<br/><br/></span>
+                        <code><b>$('body').scrollTo(50,function(){alert('Hello World!!!')});</b></code><br/><br/>
+                        <div class="outerContent">
+                        <div class="innerContent" align='center'>                            
+                            <input placeholder="nav %" type="number" min="0" max="100" class="scrollToInput" id="scrollToInput2">
+                            <button class="blue" id='letsgo2'>go!!!</button>
+                        </div>
+                        </div>
+                        <hr/>
+<h3 id="demo6">Demo : #6 <code>scrollTo</code> method with easing options</h3>
+
+                        <span> OK.. That's good, but what if someone wants to change easing style? Currently the core JQuery library includes "<code>linear</code>" and "<code>swing</code>". To use other easing methods you will need to extend your easing methods via separate plug-in, In this demo we are using easing.js which have lots of easing option (my personal favourite)<br/><br/></span>
+                       <code><b>$('body').scrollTo(50,{duration:5000, easing:"easeOutBounce"}});</b></code><br/><br/>
+                        <span>or<br/><br/></span>
+                        <code><b>$('body').scrollTo(50,{easing:"easeInOutBack"}});</b></code><br/><br/>
+                        <div class="outerContent">
+                        <div class="innerContent" align='center'>                            
+                            <input placeholder="nav %" type="number" min="0" max="100" class="scrollToInput" id="scrollToInput3">
+                            <button class="blue" id='letsgo3'>go!!!</button>
+                        </div>
+                        </div>
+						<br/>
+                        <hr/>
+<h3 id="demo7">Demo : #7 using<code>scrollTo</code> with other scrollable elements</h3>
+                        <span> Well, VerLim's <code>scrollTo</code>is not limited to just scroll the window, you can use the same to scroll any scrollable element (e.g. div, section etc.). To do so you have to pass the scrollable element in the selection where we used to pass <code>'body'</code> ;with selection prefix (e.g. # for id . for class), rest is same.<br/><br/></span>
+                       <code><b>$('#yourSelection').scrollTo(50,{duration:1000, easing:"easeOutBounce"}});</b></code><br/><br/>                        
+                        <div class="demo" id="demo">
+	<section class="demo-nav" id="demo-nav">
+		<nav>
+			<button class="blue" id="top">Top</button>
+			<button class="blue" id="center">Centre</button>
+			<button class="blue" id="bottom">Bottom</button>
+		</nav>
+	</section>
+	<section class="mainDiv" id="mainDiv">
+		<ul>
+			<li><h3>Chapter 1</h3> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut lorem ipsum. Aenean ut mauris dolor, quis interdum neque. Maecenas consectetur lorem et mi viverra viverra. Etiam vel lorem sagittis quam consequat convallis. Ut pellentesque neque eu sem vulputate nec vestibulum nisi lobortis. </p></li>
+			<li><h3>Chapter 2</h3> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut lorem ipsum. Aenean ut mauris dolor, quis interdum neque. Maecenas consectetur lorem et mi viverra viverra. Etiam vel lorem sagittis quam consequat convallis. Ut pellentesque neque eu sem vulputate nec vestibulum nisi lobortis. </p></li>
+			<li><h3>Chapter 3</h3> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut lorem ipsum. Aenean ut mauris dolor, quis interdum neque. Maecenas consectetur lorem et mi viverra viverra. Etiam vel lorem sagittis quam consequat convallis. Ut pellentesque neque eu sem vulputate nec vestibulum nisi lobortis. </p></li>
+			<li><h3>Chapter 4</h3> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut lorem ipsum. Aenean ut mauris dolor, quis interdum neque. Maecenas consectetur lorem et mi viverra viverra. Etiam vel lorem sagittis quam consequat convallis. Ut pellentesque neque eu sem vulputate nec vestibulum nisi lobortis. </p></li>
+			<li><h3>Chapter 5</h3> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut lorem ipsum. Aenean ut mauris dolor, quis interdum neque. Maecenas consectetur lorem et mi viverra viverra. Etiam vel lorem sagittis quam consequat convallis. Ut pellentesque neque eu sem vulputate nec vestibulum nisi lobortis. </p></li>
+			<li><h3>Chapter 6</h3> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut lorem ipsum. Aenean ut mauris dolor, quis interdum neque. Maecenas consectetur lorem et mi viverra viverra. Etiam vel lorem sagittis quam consequat convallis. Ut pellentesque neque eu sem vulputate nec vestibulum nisi lobortis. </p></li>
+			<li><h3>Chapter 7</h3> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut lorem ipsum. Aenean ut mauris dolor, quis interdum neque. Maecenas consectetur lorem et mi viverra viverra. Etiam vel lorem sagittis quam consequat convallis. Ut pellentesque neque eu sem vulputate nec vestibulum nisi lobortis. </p></li>
+			<li><h3>Chapter 8</h3> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut lorem ipsum. Aenean ut mauris dolor, quis interdum neque. Maecenas consectetur lorem et mi viverra viverra. Etiam vel lorem sagittis quam consequat convallis. Ut pellentesque neque eu sem vulputate nec vestibulum nisi lobortis. </p></li>
+			<li><h3>Chapter 9</h3> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut lorem ipsum. Aenean ut mauris dolor, quis interdum neque. Maecenas consectetur lorem et mi viverra viverra. Etiam vel lorem sagittis quam consequat convallis. Ut pellentesque neque eu sem vulputate nec vestibulum nisi lobortis. </p></li>
+			<li><h3>Chapter 10</h3> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut lorem ipsum. Aenean ut mauris dolor, quis interdum neque. Maecenas consectetur lorem et mi viverra viverra. Etiam vel lorem sagittis quam consequat convallis. Ut pellentesque neque eu sem vulputate nec vestibulum nisi lobortis. </p></li>
+		</ul>
+                            </section>
+</div>
+                        
+                        <br/><br/><br/>
+                        
+                        <span>P.S. user need to check once before giving any value if using any easing, here we have given 78% for bottom as some space is already taken by scroll bars and easing is also there.<br/><br/></span>
+                        <hr/>
+<h3 id="demo8">Demo : #8 using<code>scrollTo</code> to navigate to a specific element with in the scrollable element</h3>
+                        <span> Inside a scrollable element you might have some point where you want to navigate in just a click, VerLim makes it easy. How? check this code <code>'body'</code> ;with selection prefix (e.g. # for id . for class), rest is same.<br/><br/></span>
+                       <code><b>$('#yourSelection').scrollTo(50,{duration:1000, easing:"easeOutBounce"}});</b></code><br/><br/>                        
+                        <div class="demo" id="demo1">
+	<section class="demo-nav" id="demo-nav1">
+		<nav class="nav">
+			<button class="blue" id="top1">Top</button>
+			<button class="blue" id="chap2">Chap 2</button>
+			<button class="blue" id="chap4">Chap 4</button>
+            <button class="blue" id="chap6">Chap 6</button>
+			<button class="blue" id="chap8">Chap 8</button>
+            <button class="blue" id="bottom1">Bottom</button>
+		</nav>
+	</section>
+	<section class="mainDiv" id="mainDiv1">
+		<ul>
+			<li><h3>Chapter 1</h3> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut lorem ipsum. Aenean ut mauris dolor, quis interdum neque. Maecenas consectetur lorem et mi viverra viverra. Etiam vel lorem sagittis quam consequat convallis. Ut pellentesque neque eu sem vulputate nec vestibulum nisi lobortis. </p></li>
+			<li><h3 id="chapter2">Chapter 2</h3> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut lorem ipsum. Aenean ut mauris dolor, quis interdum neque. Maecenas consectetur lorem et mi viverra viverra. Etiam vel lorem sagittis quam consequat convallis. Ut pellentesque neque eu sem vulputate nec vestibulum nisi lobortis. </p></li>
+			<li><h3>Chapter 3</h3> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut lorem ipsum. Aenean ut mauris dolor, quis interdum neque. Maecenas consectetur lorem et mi viverra viverra. Etiam vel lorem sagittis quam consequat convallis. Ut pellentesque neque eu sem vulputate nec vestibulum nisi lobortis. </p></li>
+			<li><h3 id="chapter4">Chapter 4</h3> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut lorem ipsum. Aenean ut mauris dolor, quis interdum neque. Maecenas consectetur lorem et mi viverra viverra. Etiam vel lorem sagittis quam consequat convallis. Ut pellentesque neque eu sem vulputate nec vestibulum nisi lobortis. </p></li>
+			<li><h3>Chapter 5</h3> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut lorem ipsum. Aenean ut mauris dolor, quis interdum neque. Maecenas consectetur lorem et mi viverra viverra. Etiam vel lorem sagittis quam consequat convallis. Ut pellentesque neque eu sem vulputate nec vestibulum nisi lobortis. </p></li>
+			<li><h3 id="chapter6">Chapter 6</h3> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut lorem ipsum. Aenean ut mauris dolor, quis interdum neque. Maecenas consectetur lorem et mi viverra viverra. Etiam vel lorem sagittis quam consequat convallis. Ut pellentesque neque eu sem vulputate nec vestibulum nisi lobortis. </p></li>
+			<li><h3>Chapter 7</h3> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut lorem ipsum. Aenean ut mauris dolor, quis interdum neque. Maecenas consectetur lorem et mi viverra viverra. Etiam vel lorem sagittis quam consequat convallis. Ut pellentesque neque eu sem vulputate nec vestibulum nisi lobortis. </p></li>
+			<li><h3 id="chapter8">Chapter 8</h3> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut lorem ipsum. Aenean ut mauris dolor, quis interdum neque. Maecenas consectetur lorem et mi viverra viverra. Etiam vel lorem sagittis quam consequat convallis. Ut pellentesque neque eu sem vulputate nec vestibulum nisi lobortis. </p></li>
+			<li><h3>Chapter 9</h3> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut lorem ipsum. Aenean ut mauris dolor, quis interdum neque. Maecenas consectetur lorem et mi viverra viverra. Etiam vel lorem sagittis quam consequat convallis. Ut pellentesque neque eu sem vulputate nec vestibulum nisi lobortis. </p></li>
+			<li><h3>Chapter 10</h3> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut lorem ipsum. Aenean ut mauris dolor, quis interdum neque. Maecenas consectetur lorem et mi viverra viverra. Etiam vel lorem sagittis quam consequat convallis. Ut pellentesque neque eu sem vulputate nec vestibulum nisi lobortis. </p></li>
+		</ul>
+                            </section>
+</div>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <hr/>
+<h3 id="demo9">Demo : #9 How much amount of page i have scrolled, to put some conditon on a specific amount</h3>
+                        <span>VerLim shows the progress bar but what if someone wants to use the percentage in her code? e.g. after 70% scrolling one want to show some ads or banner,One can use the below code to get the scroll percentage<br/><br/></span>
+                       <code><b>$('#scroller').attr('scroller-width');</b></code><br/><br/>                     
+                        <span>This will return a number on which condition can be applied, (when you scroll this page to 80% a small banner on the right bottom is the example of this)<br/> Now adding a scroll to top button in a website can also be achieved by this by writing very less amount of code.</span>
+                        <br/><br/>
+                        <div class="outerContent">
+                        <div class="innerContent" align='center'>                            
+                        <span id="scrollPer"></span>
+                            <button class="blue" id='show'>Show scroll %</button>
+                        </div>
+                        </div>
+                        <br/>
+                        <hr class="hr"/>
+                        <br/>
+                        <h1 id="beforeYouGo">Before you go,</h1>
+                        <span>Follow me on <a href="https://twitter.com/pranayjoshicse" title="follow me on twitter"  target="_blank">Twitter</a> and <a href="https://github.com/pranayjoshicse" title="Follow me on git hub"  target="_blank">Github</a>, that&#8217;s where I&#8217;m most active these days. I welcome email (<a href="mailto:pranay.joshi@outlook.com"  target="_blank">pranay.joshi@outlook.com</a>), you can also visit our home page @ <a title="our home page" href="http://thoughts2share.in/" target="_blank">thoughts2share.in</a> to get more detail <a href="http://about.me/pranayjoshi"  target="_blank">about us</a>.<br/><br/></span>
+					</div>
+					<hr class="thickBorder"/>
+                        <span>© <a href="http://pranayjoshi.thoughts2share.in" target="_blank">Copyright pranayjoshi.thoughts2share.in 2014-15</a>></span>
+                </div>
+            </div>
+            <div class="backToTop">
+                <span><b>˄</b>Top<b>˄</b></span>
+            </div>
+            <div id="footerwrapper">
+                <div id="footer">
+                    <div class="container">
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
